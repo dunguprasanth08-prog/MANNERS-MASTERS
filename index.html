@@ -17,6 +17,26 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(1.7rem,5vw,2.7rem);line-height:1.08}p
 .feedback{padding:15px;border-radius:18px;margin-top:14px;background:#eefaf3;border:2px solid #c6f0d8}.feedback.bad{background:#fff4f1;border-color:#ffd4c9}.bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:16px}.tiny{font-size:.88rem}.levelgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.level{background:#fff;border-radius:16px;padding:12px 5px;text-align:center;border:2px solid #e9eef6}.level.done{background:#e5fff0;border-color:#83ddb0}.level.current{border-color:#ff8ca7;background:#fff1f5}.confetti{font-size:1.5rem}.footer{text-align:center;padding:20px;font-size:.82rem;opacity:.7}
 @keyframes bob{0%,100%{transform:translateY(0) rotateY(-4deg)}50%{transform:translateY(-8px) rotateY(4deg)}}
 @media(max-width:600px){.hero{grid-template-columns:1fr}.friends{min-height:180px;order:0}.person{transform:scale(.88);transform-origin:bottom center;margin:0 -7px}.hero-copy{order:1}.levelgrid{grid-template-columns:repeat(5,1fr)}.app{padding:10px}.panel{border-radius:22px}}
+/* Chinnu and Chinni 3D-style upgrade */
+.person {
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffffff, #e5f3ff);
+  box-shadow: 0 12px 24px rgba(32, 65, 120, 0.22),
+              inset 0 3px 6px rgba(255,255,255,0.9);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.person:hover {
+  transform: translateY(-5px) rotateY(-4deg);
+  box-shadow: 0 18px 28px rgba(32, 65, 120, 0.28);
+}
+@keyframes chinnuFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
+}
+.person {
+  animation: chinnuFloat 3s ease-in-out infinite;
+}
 </style></head>
 <body><main class="app">
 <div class="top"><div class="logo">🌟 Manners Adventure</div><div style="display:flex;gap:8px;align-items:center"><select id="lang" aria-label="Language" class="pill" style="border:0"><option value="en">English</option><option value="te">తెలుగు</option></select><button id="voiceBtn" class="soft" title="Turn voice on or off">🔊 Voice on</button></div></div>
